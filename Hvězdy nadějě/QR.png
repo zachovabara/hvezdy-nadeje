@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head><script type="text/javascript" src="../resource/cz.fio.ib2.common.wicket.web.layout.jquery.JQuery/js/jquery-3.6.0.min-ver-CE8F684A284EDB4E0F59F8333915FFF3.js"></script>
+<script type="text/javascript" src="../resource/org.apache.wicket.ajax.AbstractDefaultAjaxBehavior/res/js/wicket-ajax-jquery-ver-8CD946166F47E5DD4EADD165939FF57D.js"></script>
+<script type="text/javascript" id="wicket-ajax-base-url">
+/*<![CDATA[*/
+Wicket.Ajax.baseUrl="fio/page/zaplat-mi?3";
+/*]]>*/
+</script>
+<script type="text/javascript" src="../resource/cz.fio.ib2.common.wicket.web.layout.popper.Popper/popper-ver-B88AB82D5D8146BDC5CAC5A91F89C7D3.js"></script>
+<link rel="stylesheet" type="text/css" href="../resource/cz.fio.ib2.common.wicket.web.layout.tippy.Tippy/tippy-ver-EBD6F8CE46A677E1A4F5F8A8317109A9.css" media="screen, print" />
+<script type="text/javascript" src="../resource/cz.fio.ib2.common.wicket.web.layout.tippy.Tippy/tippy-ver-9DAE930A24E25D61134B6E5EB6831B36.js"></script>
+<link rel="stylesheet" type="text/css" href="../resource/cz.fio.ib2.common.wicket.web.layout.jqueryUI.JQueryUI/jquery-ui-1.13.1.min-ver-3809AB2F81BAF761459F5E66F169A5D7.css" media="screen" />
+<script type="text/javascript" src="../resource/cz.fio.ib2.common.wicket.web.layout.jqueryUI.JQueryUI/jquery-ui-1.13.1.min-ver-1174ABB1D3A146BA5ABD4E6FD5F94B41.js"></script>
+<link rel="stylesheet" type="text/css" href="../resource/cz.fio.ib2.common.wicket.web.layout.bootstrap.Bootstrap/css/bootstrap_341.min-ver-4BE1CDB6FF8DBD79BE777AD52F309349.css" media="screen, print" />
+<script type="text/javascript" src="../resource/cz.fio.ib2.common.wicket.web.layout.bootstrap.Bootstrap/js/bootstrap_341.min-ver-2F34B630FFE30BA2FF2B91E3F3C322A1.js"></script>
+<link rel="stylesheet" type="text/css" href="../resource/cz.fio.ib2.common.wicket.web.layout.bootstrapSelect.BsSelect/css/bootstrap-select.min-ver-2212BC6B437F27E6F6AC3FE2D30BF349.css" media="screen, print" />
+<script type="text/javascript" src="../resource/cz.fio.ib2.common.wicket.web.layout.bootstrapSelect.BsSelect/js/bootstrap-select.min-ver-F20D3F02E2FBAD79845F3AB4C458AA20.js"></script>
+<script type="text/javascript" src="../resource/cz.fio.ib2.web.component.datePicker.DatePicker/DatePicker_cs-ver-B53E393FD0791540160DFB834FE263AD.js"></script>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" sizes="16x16" type="image/x-icon" href="../resource/cz.fio.ib2.common.wicket.web.layout.image.FioImage/png/favicon-ver-BED52CBBA61C3C2EFBCD2A3F722B3146.ico">
+	<title>Internetové bankovnictví | Fio banka</title>
+	
+
+<link rel="stylesheet" type="text/css" href="../resource/cz.fio.ib2.common.wicket.web.layout.fontawesome.FontAwesome/css/font-awesome.min-ver-269550530CC127B6AA5A35925A7DE6CE.css" media="screen" />
+<script type="text/javascript" src="../resource/cz.fio.ib2.common.wicket.web.layout.scripts.Scripts/defaultJsFunctions-ver-339D32B737C5D376645BE9AAFB9F2B0E.js"></script>
+<script type="text/javascript" src="../resource/cz.fio.ib2.common.wicket.web.layout.scripts.Scripts/defaultLocalizedJsFunctions-ver-57244FFEF2516F1B0F7E5D0F00C28E1C.js"></script>
+<link rel="stylesheet" type="text/css" href="../resource/cz.fio.ib2.web.layout.BasePage/style-ver-DDB108BAFE1F43E019041F70DEFC916C.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="../resource/cz.fio.ib2.web.layout.BasePage/print-ver-98E7EA0529EA6D60F27CD68E8A462E77.css" media="print" />
+<meta name="description" content="Přihlášení do internetového bankovnictví Fio banky. Kromě plateb si zde můžete založit i další účty, požádat o půjčku, kontokorent a další služby." />
+<link rel="stylesheet" type="text/css" href="../resource/cz.fio.ib2.web.layout.StandardPage/wide-ver-5B1CD4B9B81549EA19161874208E9DEF.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="../resource/cz.fio.ib2.web.layout.StandardPage/velikostPisma_male-ver-2F19DFB98722FDC73059777BFB526902.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="../resource/cz.fio.ib2.web.layout.StandardPage/vzdusnost_mala-ver-ECDBF5E42AB6C0988C271795A24CE281.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="../resource/cz.fio.ib2.web.layout.StandardPage/barevneSchema_contrast-ver-2A14B04415507A10483E35C519C31ADC.css" media="screen" />
+<script type="text/javascript">
+/*<![CDATA[*/
+function responsiveTable(table) {
+	if (table.is(':visible')) {
+		if (table.width() > table.parent().width()) {
+			table.parent().addClass('table-responsive2');
+			table.parent().removeClass('table-responsive');
+			Wicket.Ajax.ajax({"u":"./zaplat-mi?3-2.0-","ch":"DefaultIBActiveChannel|a"});;
+		} else {
+			table.parent().addClass('table-responsive');
+			table.parent().removeClass('table-responsive2');
+		}
+	}
+};
+/*]]>*/
+</script>
+<script type="text/javascript">
+/*<![CDATA[*/
+Wicket.Event.add(window, "domready", function(event) { 
+Wicket.Ajax.ajax({"u":"./zaplat-mi?3-2.1-logoutDialog-stayLoggedInLink","c":"id3c0d16465a70ad0757","i":"id3c0d16465a70ad0757--ajax-indicator","e":"click","ch":"DefaultIBActiveChannel|a","pd":true});;
+Wicket.Ajax.ajax({"u":"./zaplat-mi?3-2.0-zaplatMiForm-switcher-components","m":"POST","c":"idb8f3fdede195f91563","sr":true,"pre":[function(attrs){return attrs.event.target.name === 'switcher:components'}],"e":"change","ch":"DefaultIBActiveChannel|a"});;
+Wicket.Ajax.ajax({"u":"./zaplat-mi?3-2.0-zaplatMiForm-generuj","m":"POST","c":"id707d64b85efe12cd65","f":"id683c4b1686770b0a64","sc":"generuj","i":"id707d64b85efe12cd65--ajax-indicator","e":"click","ch":"DefaultIBActiveChannel|a","pd":true});;
+Wicket.Event.publish(Wicket.Event.Topic.AJAX_HANDLERS_BOUND);
+;});
+/*]]>*/
+</script>
+<script type="text/javascript">
+/*<![CDATA[*/
+Wicket.Event.add(window, "load", function(event) { 
+// Provides records of user activity
+class UserActivityListener {
+    #lastActivityUserTimestamp;
+    #countOfKeyPressed;
+
+    constructor() {
+        this.resetActivity();
+    }
+
+    getUserActivity(currentTime) {
+        return {
+            userIdleTime: (this.hasNoActivity()) ? 0 : currentTime - this.#lastActivityUserTimestamp,
+            countOfKeyPressed: this.#countOfKeyPressed
+        };
+    }
+
+    updateActivity() {
+        this.#lastActivityUserTimestamp = Date.now();
+        this.#countOfKeyPressed++;
+    }
+
+    resetActivity() {
+        this.#lastActivityUserTimestamp = 0;
+        this.#countOfKeyPressed = 0;
+    }
+
+    hasNoActivity() {
+        return this.#lastActivityUserTimestamp === 0;
+    }
+}
+
+// Provides a service to manage the logout time cookies
+class LogoutTimeCookiesService {
+    #parsedCookie;
+    #previousCookies;
+
+    constructor() {
+        this.#previousCookies = docCookies.getItem('__Host-IB2_jsLogoutTime');
+        this.#parsedCookie = this.#getParsedCookie(this.#previousCookies)
+    }
+
+    #getParsedCookie(cookie) {
+        const cookieParts = cookie.split('|');
+        return {
+            modalDialogTimestamp: +cookieParts[2],
+            logoutTimestamp: +cookieParts[3]
+        }
+    }
+
+    isNewCookie() {
+        const currentCookies = docCookies.getItem('__Host-IB2_jsLogoutTime');
+        if (currentCookies !== this.#previousCookies) {
+            this.#previousCookies = currentCookies;
+            this.#parsedCookie = this.#getParsedCookie(currentCookies);
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    get getCookie() {
+        return this.#parsedCookie;
+    }
+}
+
+(function () {
+    const AUTOMATIC_TIME_EXTENSION_OFFSET = 5000; // 5s
+    const INTERVAL_TIMEOUT = 1000; // 1s
+    const userActivityListener = new UserActivityListener();
+    const logoutTimeCookiesService = new LogoutTimeCookiesService();
+    const $logoutModalDialog = $('#id8fd18182114fa84255');
+    let isTimeExtensionRequestSent = false;
+
+    // Function declarations
+    function reset() {
+        if (isTimeExtensionRequestSent) {
+            isTimeExtensionRequestSent = false;
+        }
+        if ($logoutModalDialog.is(':visible')) {
+            $logoutModalDialog.modal('hide');
+        }
+    }
+
+    function getCurrentCookie() {
+        if (logoutTimeCookiesService.isNewCookie()) {
+            userActivityListener.resetActivity();
+            reset();
+        }
+        return logoutTimeCookiesService.getCookie;
+    }
+
+    function processTheLogout(intervalID) {
+        clearInterval(intervalID);
+        window.location.replace('../../logout');
+    }
+
+    function processTheDisplayOfDialog() {
+        if ($logoutModalDialog.is(':hidden')) {
+            $logoutModalDialog.modal('show');
+        }
+    }
+
+    function processTheAutomaticTimeExtension(currentTimestamp) {
+        if (isTimeExtensionRequestSent || userActivityListener.hasNoActivity()) {
+            return;
+        }
+        const userActivity = userActivityListener.getUserActivity(currentTimestamp);
+        let callbackPost = function (userIdleTimeParam,countOfKeyPressedParam) {
+var attrs = {"u":"./zaplat-mi?3-2.0-logoutDialog-stayLoggedInLink","m":"POST","c":"id3c0d16465a70ad0757","i":"id3c0d16465a70ad0757--ajax-indicator"};
+var params = [{"name":"userIdleTimeParam","value":userIdleTimeParam},{"name":"countOfKeyPressedParam","value":countOfKeyPressedParam}];
+attrs.ep = params.concat(attrs.ep || []);
+Wicket.Ajax.ajax(attrs);
+}
+;
+        callbackPost(userActivity.userIdleTime, userActivity.countOfKeyPressed);
+        isTimeExtensionRequestSent = true;
+    }
+
+    // The main script run
+    document.addEventListener("keyup", userActivityListener.updateActivity.bind(userActivityListener));
+    const intervalID = setInterval(() => {
+        const cookie = getCurrentCookie();
+        if (cookie === null || cookie === undefined) {
+            return;
+        }
+        const timestampToDisplayModalDialog = cookie.modalDialogTimestamp;
+        const timestampToLogout = cookie.logoutTimestamp;
+        const currentTimestamp = Date.now();
+        if (timestampToDisplayModalDialog != null && timestampToLogout != null) {
+            const timestampToAutomaticTimeExtension = timestampToDisplayModalDialog - AUTOMATIC_TIME_EXTENSION_OFFSET
+            if (currentTimestamp > timestampToLogout) {
+                processTheLogout(intervalID);
+            } else if (currentTimestamp > timestampToDisplayModalDialog) {
+                processTheDisplayOfDialog();
+            } else if (currentTimestamp > timestampToAutomaticTimeExtension) {
+                processTheAutomaticTimeExtension(currentTimestamp);
+            }
+        }
+    }, INTERVAL_TIMEOUT); // every second
+})();
+;
+tippy('.tooltipMarker', {allowHTML: true});;
+$(function() {
+    $( "#id56618ffbd0ae40fa59" ).on("change", function() {
+        const show = false;
+        if(show){
+            $('#idd8cf626708a5a50d5a').show();
+        }else{
+            $('#idd8cf626708a5a50d5a').hide();
+        }
+    });
+});;
+(function() {
+	$("#id645938a56fb621f25b").focusout(function(event) {
+		var value = numberSeparator($(this).val(), ",", "\u00A0", ", ");
+		$(this).val(value);
+	});
+})();
+;
+$(function() {
+    $( "#id645938a56fb621f25b" ).on("input change", function() {
+        const show = false;
+        if(show){
+            $('#idd8cf626708a5a50d5a').show();
+        }else{
+            $('#idd8cf626708a5a50d5a').hide();
+        }
+    });
+});;
+$("#idf220372ef3ec0b9e5c").nextAll("button").first().remove();
+$("#idf220372ef3ec0b9e5c").nextAll(".dropdown-menu").first().remove();
+$("#idf220372ef3ec0b9e5c").selectpicker({dropupAuto: false, showSubtext: true});;
+$(function() {
+    $( "#idf220372ef3ec0b9e5c" ).on("change", function() {
+        const show = false;
+        if(show){
+            $('#idd8cf626708a5a50d5a').show();
+        }else{
+            $('#idd8cf626708a5a50d5a').hide();
+        }
+    });
+});;
+$(function() {
+    $( "#idf46074399f01edb55d" ).on("input change", function() {
+        const show = false;
+        if(show){
+            $('#idd8cf626708a5a50d5a').show();
+        }else{
+            $('#idd8cf626708a5a50d5a').hide();
+        }
+    });
+});;
+$('#idf46074399f01edb55d').datepicker({minDate: 0}); $('#idbd4ffb1acb2ca5515e').click(function(){$(this).closest('.input-group').children('.form-control').datepicker('show');});;
+$(function() {
+    $( "#id1dd19613ecb9d74c5f" ).on("input change", function() {
+        const show = false;
+        if(show){
+            $('#idd8cf626708a5a50d5a').show();
+        }else{
+            $('#idd8cf626708a5a50d5a').hide();
+        }
+    });
+});;
+$(function() {
+    $( "#iddb3f2da10330b39c60" ).on("input change", function() {
+        const show = false;
+        if(show){
+            $('#idd8cf626708a5a50d5a').show();
+        }else{
+            $('#idd8cf626708a5a50d5a').hide();
+        }
+    });
+});;
+$(function() {
+    $( "#id44c892552e96aba361" ).on("input change", function() {
+        const show = false;
+        if(show){
+            $('#idd8cf626708a5a50d5a').show();
+        }else{
+            $('#idd8cf626708a5a50d5a').hide();
+        }
+    });
+});;
+$(function() {
+    $( "#ida42b946a7634c11f62" ).on("input change", function() {
+        const show = false;
+        if(show){
+            $('#idd8cf626708a5a50d5a').show();
+        }else{
+            $('#idd8cf626708a5a50d5a').hide();
+        }
+    });
+});;
+setMinimalContentSize();;
+;});
+/*]]>*/
+</script>
+</head>
+<body>
+	
+	<div id="id3646c65afd1cce2566" hidden="" data-wicket-placeholder=""></div>
+
+	<div class="modal fade logoutModal" id="id8fd18182114fa84255" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal_lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="myModalLabel">Odhlášení</h4>
+				</div>
+				<div class="modal-body">
+					Delší dobu jste neprovedli žádnou aktivní činnost. Pokud si přejete v práci pokračovat, stiskněte tlačítko OK. Když tak neučiníte, dojde již za necelou minutu k odhlášení.
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn greenBtn refreshConnection" id="id3c0d16465a70ad0757">OK</button><span hidden="" class="wicket-ajax-indicator" id="id3c0d16465a70ad0757--ajax-indicator"><img src="../resource/org.apache.wicket.ajax.AbstractDefaultAjaxBehavior/indicator-ver-03CE3DCC84AF110E9DA8699A841E5200.gif" alt=""/></span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="wrapperPage">
+
+		<div class="wrapperHeader">
+		<div class="green_border"></div>
+		<div class="container" style="margin-bottom: 20px;">
+			<div class="row">
+				<div class="col-md-4" style="line-height: 50px;">
+					
+						<a href="./zaplat-mi?3-2.-header-home~page"><img class="logo_header img-responsive" src="../resource/cz.fio.ib2.common.wicket.web.layout.image.FioImage/png/logo_fio-ver-894B2A39F77CABA34D70A4AC4C0FE0B6.png"/></a>
+					
+				</div>
+
+				<div class="col-md-4 nav_header text-center">
+
+					<form id="id2ac97c825bd299c358" method="post" action="./zaplat-mi?3-2.-header-searchForm" class="fiigleDisable"><input type="hidden" name="csrf_hf_id2ac97c825bd299c358" id="csrf_hf_id2ac97c825bd299c358" value="2qjO21nN3ht8xm7Y4sRmyQey1hyC51uCzGlkfoN5DB5E1KbcXrrgRSQRgfZCl8hq" /><div id="id2ac97c825bd299c358_hf_0" hidden="" class="hidden-fields"></div>
+						<div class="input-group">
+							<span class="input-group-btn inputAddonPre" style="position: static;">
+								<button class="btn btn-search" type="submit" name="search" disabled="disabled" id="id99f2fe86c2398f9467">
+									<i class="fa fa-search"></i>
+								</button><span hidden="" class="wicket-ajax-indicator" id="id99f2fe86c2398f9467--ajax-indicator"><img src="../resource/org.apache.wicket.ajax.AbstractDefaultAjaxBehavior/indicator-ver-03CE3DCC84AF110E9DA8699A841E5200.gif" alt=""/></span> <i class="fa fa-times deleteText"></i>
+							</span> 
+							<input class="form-control searchInput searchInputHeader" type="text" style="border-left: medium none;" value="" name="text" disabled="disabled" placeholder="Vyhledávání je dočasně nedostupné."> 
+							<div class="input-group-btn dropHover">
+
+	<button class="btn btn-default dropdown-toggle" type="button">
+		<i class="fa fa-angle-down bold"></i>
+	</button>
+	<ul class="dropdown-menu dropdown-menu-right">
+
+		
+
+		
+
+		<li class="divider"></li>
+		<li><a>Přejít na rozšířené vyhledávání</a></li>
+	</ul>
+
+	
+</div>
+						</div>
+					</form>
+				</div>
+				<div class="col-md-4 text-center" style="margin-top: 5px;">
+					<div class="row">
+						<div class="col-md-4">
+							<div class="notifiBox newProduct">
+								<i class="fa fa-plus fa-lg"></i> <a href="./zaplat-mi?3-2.-header-novyProdukt">Nový produkt</a>
+							</div>
+						</div>
+						<div class="col-md-2" style="border-right: 1px solid #ddd; border-left: 1px solid #ddd;">
+							<div class="zpravy inline notifiBox">
+								<a href="./zaplat-mi?3-2.-header-messagesLink" class="mesEnvelope"> <i class="fa fa-envelope-o fa-lg"></i> <span class="label bgRed" style="position: absolute; top: -8px; right: -8px;">2</span>
+								</a>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="top_menu_name">Nedvěd, David</div>
+							<ul class="top_menu pull-right">
+								<li><a href="./zaplat-mi?3-2.-header-nastaveniLink">Nastavení</a></li>
+								<li><a href="../../logout?r=USER_LOGOUT&amp;lng=CZECH">Odhlásit</a></li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+		<div class="container wrapperBody">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="row menu">
+						<div class="col-md-2">
+
+
+							<div role="navigation" class="btn-group btnChevron dropHover" style="width: 100%">
+
+								
+									<div class="btn-menu btnSingleAcc">
+										<div class="pull-left">Nedvěd, David</div>
+									</div>
+								
+								
+							</div>
+						</div>
+						<div class="col-sm-10 menu-topBox" role="navigation">
+							<div>
+		<div class="menu-top">
+			<div class="btn-group noDropdown">
+				<ul>
+					<li>
+						<a href="./zaplat-mi?3-2.-menu-dashboardLink" class="btn btn-menu dropdown-toggle btn-sm"> 
+							<span class="jmeno_dropdown">Nástěnka</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="btn-group dropHover">
+		<div class="btn btn-menu btn-sm">
+			<div class="jmeno_dropdown">
+				Poslat peníze
+			</div>
+			<i class="fa fa-angle-down caret-nav"></i>
+		</div>
+
+		
+	<div class="dropdown-menu dropdown-nav">
+		<div class="clearfix">
+			<div class="pull-left dropdown_box" style="width: 49%">
+				<div class="dropdown_nadpis">
+					Jednorázově
+				</div>
+				<ul>
+					<li><a href="./zaplat-mi?3-2.-menu-poslatPenizeMenu-poslatPenizeCeskyKlient-prevodMeziUctyUFioBanky">Převod uvnitř Fio banky <span
+							class="text-muted"> (ve všech měnách)
+						</span> </a></li>
+					<li><a href="./zaplat-mi?3-2.-menu-poslatPenizeMenu-poslatPenizeCeskyKlient-prevodMeziMymiUcty">Převod mezi mými účty</a></li>
+					<li><a href="./zaplat-mi?3-2.-menu-poslatPenizeMenu-poslatPenizeCeskyKlient-tuzemskaPlatba">Tuzemská platba</a></li>
+					<li><a href="./zaplat-mi?3-2.-menu-poslatPenizeMenu-poslatPenizeCeskyKlient-zaplatMi">Zaplať mi</a></li>
+					<li><a href="./zaplat-mi?3-2.-menu-poslatPenizeMenu-poslatPenizeCeskyKlient-platbaDoSR">Platba do SR</a></li>
+					<li><a href="./zaplat-mi?3-2.-menu-poslatPenizeMenu-poslatPenizeCeskyKlient-europlatba">Europlatba</a></li>
+					<li><a href="./zaplat-mi?3-2.-menu-poslatPenizeMenu-poslatPenizeCeskyKlient-zahranicni">Zahraniční platba</a></li>
+					<li><a href="./zaplat-mi?3-2.-menu-poslatPenizeMenu-poslatPenizeCeskyKlient-hromadnyPokyn">Hromadný příkaz</a></li>
+				</ul>
+			</div>
+			<div class="pull-left dropdown_box" style="width: 49%">
+				<div class="dropdown_nadpis">
+					Pravidelně
+				</div>
+				<ul>
+					<li><a href="./zaplat-mi?3-2.-menu-poslatPenizeMenu-poslatPenizeCeskyKlient-trvalyPrikaz">Trvalý příkaz k úhradě</a></li>
+					<li><span data-tippy-content="Nemáte žádný účet, ze kterého lze podat daný typ pokynu." data-tippy-placement="right" aria-label="Nemáte žádný účet, ze kterého lze podat daný typ pokynu." class="tooltipMarker disableMenuLink">Euro trvalý příkaz k úhradě</span></li>
+					<li><a href="./zaplat-mi?3-2.-menu-poslatPenizeMenu-poslatPenizeCeskyKlient-sipo">SIPO</a></li>
+					<li><a href="./zaplat-mi?3-2.-menu-poslatPenizeMenu-poslatPenizeCeskyKlient-souhlasSInkasem">Souhlas s inkasem</a></li>
+					<li><a href="./zaplat-mi?3-2.-menu-poslatPenizeMenu-poslatPenizeCeskyKlient-souhlasSInkasemSepa">Souhlas s inkasem SEPA</a></li>
+				</ul>
+			</div>
+		</div>
+		<hr class="dropMenu-hr">
+		<div class="clearfix">
+			<div class="pull-left dropdown_box">
+				<div class="dropdown_nadpis">
+					Ostatní
+				</div>
+				<ul>
+					<li><a href="./zaplat-mi?3-2.-menu-poslatPenizeMenu-poslatPenizeCeskyKlient-prikazKInkasu"> Příkaz k inkasu <span
+							class="text-muted"> (vy chcete inkasovat od jiné osoby)
+						</span>
+					</a></li>
+					<li><span data-tippy-content="Nemáte žádný účet, ze kterého lze podat daný typ pokynu." data-tippy-placement="right" aria-label="Nemáte žádný účet, ze kterého lze podat daný typ pokynu." class="tooltipMarker disableMenuLink">Příkaz k inkasu SEPA</span></li>
+					<li><a href="./zaplat-mi?3-2.-menu-poslatPenizeMenu-poslatPenizeCeskyKlient-importPrikazu">Import plateb a inkas</a></li>
+					<li><a href="./zaplat-mi?3-2.-menu-poslatPenizeMenu-poslatPenizeCeskyKlient-dobitiKreditu">Dobití kreditu</a></li>
+					<li><a href="./zaplat-mi?3-2.-menu-poslatPenizeMenu-poslatPenizeCeskyKlient-avizo">Avízo výběru na pokladně</a></li>
+					
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+
+		
+	</div>
+			<div class="btn-group dropHover">
+				<div class="btn btn-menu btn-sm">
+					<div class="jmeno_dropdown">
+						Přehledy
+					</div>
+					<i class="fa fa-angle-down caret-nav"></i>
+				</div>
+				<div style="width: 335px;" class="dropdown-menu dropdown-nav">
+					<div class="clearfix">
+						<div class="pull-left dropdown_box">
+							<div class="dropdown_nadpis"></div>
+							<ul>
+								<li><a href="./zaplat-mi?3-2.-menu-prehledyContainer-pohyby">Pohyby na účtu</a></li>
+								<li><a href="./zaplat-mi?3-2.-menu-prehledyContainer-karetniTransakce">Karetní transakce</a></li>
+								<li><a href="./zaplat-mi?3-2.-menu-prehledyContainer-zustatky">Zůstatky</a></li>
+								<li><a href="./zaplat-mi?3-2.-menu-prehledyContainer-trvalePrikazy"> Trvalé příkazy</a></li>
+								<li><a href="./zaplat-mi?3-2.-menu-prehledyContainer-inkasaSipa">Inkasa a SIPO</a></li>
+								<li><a href="./zaplat-mi?3-2.-menu-prehledyContainer-vypisy">Výpisy z účtu</a></li>
+								<li><a href="./zaplat-mi?3-2.-menu-prehledyContainer-planovane~platby">Plánované platby</a></li>
+								<li><a href="./zaplat-mi?3-2.-menu-prehledyContainer-odmitnuteAStornovanePokyny">Odmítnuté a zrušené platby</a></li>
+								<li><a href="./zaplat-mi?3-2.-menu-prehledyContainer-kPodpisu">Příkazy k podpisu</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="btn-group dropHover">
+				<div class="btn btn-menu btn-sm">
+					<div class="jmeno_dropdown">
+						Platební karty
+					</div>
+					<i class="fa fa-angle-down caret-nav"></i>
+				</div>
+				<div style="width: 335px;" class="dropdown-menu dropdown-nav">
+					<div class="clearfix">
+						<div class="pull-left dropdown_box">
+							<div class="dropdown_nadpis"></div>
+							<ul>
+								<li>
+									<a href="./zaplat-mi?3-2.-menu-kartyContainer-prehledKaret">
+										Přehled karet
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<hr class="dropMenu-hr">
+					<div class="clearfix">
+						<div class="pull-left dropdown_box">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="btn-group noDropdown">
+				<ul>
+					<li>
+						<a href="./zaplat-mi?3-2.-menu-sablony" class="btn btn-menu dropdown-toggle btn-sm">
+							<span class="jmeno_dropdown">Šablony</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			
+			
+			
+			<div class="btn-group pull-right noDropdown">
+				<ul>
+					<li>
+						<a href="./zaplat-mi?3-2.-menu-ucetInfo" class="btn btn-menu dropdown-toggle btn-sm">
+							<span class="jmeno_dropdown">Informace o účtu</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="btn-group noDropdown">
+				<ul>
+					<li>
+						<a href="./zaplat-mi?3-2.-menu-investiceLink" class="btn btn-menu dropdown-toggle btn-sm">
+							<span class="jmeno_dropdown">Investice</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-12 wrapper">
+					
+    <div class="row">
+        <div class="col-md-12">
+            <div class="page-header">
+                <h1>
+                    Zaplať mi
+                </h1>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div id="ide62d51401234ee3468" hidden="" data-wicket-placeholder=""></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <form id="id683c4b1686770b0a64" method="post" action="./zaplat-mi?3-2.-zaplatMiForm"><input type="hidden" name="csrf_hf_id683c4b1686770b0a64" id="csrf_hf_id683c4b1686770b0a64" value="8JQNTQcnDU3Dbf5I04M43YcsQGIHk879rIMpGkDTGnBu70lTbBLJuGkUMZMuEyow" /><div id="id683c4b1686770b0a64_hf_0" hidden="" class="hidden-fields"></div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="id24fccd802581dc5969">Typ QR platebního kódu</label>
+                            <div id="id24fccd802581dc5969">
+	<div id="idb8f3fdede195f91563">
+		<div class="btn-group switcherBtn" data-toggle="buttons">
+			<div class="btn btn-default active ">
+				<input type="radio" id="id21cdb1adbf790b7272" name="switcher:components" value="radio4" checked="checked"> <label for="id21cdb1adbf790b7272">Český (Spayd)</label>
+			</div><div class="btn btn-default">
+				<input type="radio" id="id59aa9700139b637c73" name="switcher:components" value="radio5"> <label for="id59aa9700139b637c73">Slovenský (PayBySquare)</label>
+			</div>
+		</div>
+	</div>
+</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="form-group">
+                            <label for="id111fc4d63e0c6cbe6c">Na účet*</label>
+                            <div id="id56618ffbd0ae40fa59">
+		<div class="input-group">Nedvěd, David (2303441566 - 0 CZK)</div>
+		
+	</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="id645938a56fb621f25b">Částka</label>
+                            <input type="text" class="form-control" value="100" name="objem" id="id645938a56fb621f25b" maxlength="11"/>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="idf220372ef3ec0b9e5c">Měna*</label>
+                            <select class="form-control" name="mena" id="idf220372ef3ec0b9e5c">
+<option selected="selected" value="CZK">CZK</option>
+<option value="USD">USD</option>
+<option value="EUR">EUR</option>
+<option value="PLN">PLN</option>
+<option value="HUF">HUF</option>
+<option value="GBP">GBP</option>
+<option value="AUD">AUD</option>
+<option value="CAD">CAD</option>
+<option value="DKK">DKK</option>
+<option value="CHF">CHF</option>
+<option value="JPY">JPY</option>
+<option value="NOK">NOK</option>
+<option value="RUB">RUB</option>
+<option value="SEK">SEK</option>
+</select>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="id26fd83e5eb84b8af6d">Ke dni*</label>
+                            <div class="input-group" id="id26fd83e5eb84b8af6d">
+		<input type="text" class="form-control input-sm datepicker" value="19.02.2026" name="datum:inputField" id="idf46074399f01edb55d"/>
+		<span class="input-group-addon" style="cursor: pointer" id="idbd4ffb1acb2ca5515e"> <i class="fa fa-calendar"></i>
+		</span>
+	</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="id38f310edc3fe96866e">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="id1dd19613ecb9d74c5f">Variabilní symbol</label>
+                                <input type="text" class="form-control" value="" name="czPaymentContainer:vs" id="id1dd19613ecb9d74c5f" maxlength="10"/>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="iddb3f2da10330b39c60">Specifický symbol</label>
+                                <input type="text" class="form-control" value="" name="czPaymentContainer:ss" id="iddb3f2da10330b39c60" maxlength="10"/>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="id44c892552e96aba361">Konstantní symbol</label>
+                                <input type="text" class="form-control" value="" name="czPaymentContainer:ks" id="id44c892552e96aba361" maxlength="4"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="ida42b946a7634c11f62">Zpráva pro příjemce</label>
+                                <input type="text" class="form-control" value="" name="czPaymentContainer:zpravaProPrijemce" id="ida42b946a7634c11f62" maxlength="60"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="idaf98a4cf8265f2e76f" hidden="" data-wicket-placeholder=""></div>
+
+                <div class="row actionBtnRow">
+                    <div class="col-md-3">
+                        <button type="submit" class="btn greenBtn pull-left" name="generuj" id="id707d64b85efe12cd65">
+                            Generuj QR
+                        </button><span hidden="" class="wicket-ajax-indicator" id="id707d64b85efe12cd65--ajax-indicator"><img src="../resource/org.apache.wicket.ajax.AbstractDefaultAjaxBehavior/indicator-ver-03CE3DCC84AF110E9DA8699A841E5200.gif" alt=""/></span>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="col-md-4 text-center" id="idd8cf626708a5a50d5a">
+            <div class="row" style="padding-top: 25px;">
+                <div class="col-md-12">
+                    <img class="rounded" id="idd26001346272a6b656" src="./zaplat-mi?3--qrCodeBox-qrCode&amp;antiCache=1771521475066" width="350" height="350"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12" style="padding-top: 20px;">
+                    <a href="#" style="font-size: 20px;" onClick="this.href = $(&#039;#idd26001346272a6b656&#039;).attr(&#039;src&#039;);" download="QRPlatba_na_ucet_2303441566.png">
+                        Uložit obrázek QR Platby
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 20px;">
+    <div class="col-md-12">
+        <span class="darkBlue bold">*</span>
+        povinná položka
+    </div>
+</div>
+
+
+				</div>
+			</div>
+		</div>
+
+		<div class="wrapperFooter">
+    <div class="green_border" style="margin-top: 25px; margin-bottom: 0px;"></div>
+    <div class="grey_footer">
+        <div class="container fio-container">
+            <div class="row">
+                <div class="col-sm-6 gfBox">
+                    <a href="./fioservis-zadani"> <i class="fa fa-envelope-o fa-lg"></i>
+                        Napište nám přes <strong>Fio servis</strong>
+                    </a>
+                </div>
+                <div class="col-sm-6 text-right gfBox">
+                    <a style="white-space: nowrap" href="./kurzovni-listek">
+                        <i class="fa fa-eur fa-lg"></i> Kurzovní lístek
+                    </a>
+                    <a style="white-space: nowrap; margin-left: 20px" href="./log">
+                        <i class="fa fa-lock fa-lg"></i> Historie přístupů
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="grey2_footer">
+        <div class="container fio-container">
+            <div class="row">
+                <div class="col-md-8 gfBox">
+                    <div>
+                        <strong>Vaše pobočka</strong>
+                        <a target="_blank" href="https://www.fio.cz/o-nas/kontakty">
+                            (zobrazit všechny)
+                        </a>
+                    </div>
+                    <div>
+                        <span class="footBranch">Ústí nad Labem, Dlouhá 3458/2A (Palác Jordán), 400 01</span>
+                        <span class="footBranch">tel.: <strong>224 346 902 - 904</strong></span>
+                        <span class="footBranch">usti.nad.labem@fio.cz</span>
+                        <span class="footBranch">
+                            <a target="_blank" href="https://www.fio.cz/o-nas/kontakty/354020-Usti-nad-Labem"> <i class="fa fa-external-link"></i></a>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4 text-right gfBox footCopy">
+                    <div class="footerLangs">
+                        <a href="./zaplat-mi?3-2.-footer-langCz"><img src="../resource/cz.fio.ib2.common.wicket.web.layout.image.FioImage/png/VlajkaCzVelka-ver-09793143F96B19AF735C707E3069487F.png"/></a>
+                        <a href="./zaplat-mi?3-2.-footer-langSk"><img src="../resource/cz.fio.ib2.common.wicket.web.layout.image.FioImage/png/VlajkaSkVelka-ver-1EBB0CE03A92206BDAFCA4BB95AA9154.png"/></a>
+                        <a href="./zaplat-mi?3-2.-footer-langGb"><img src="../resource/cz.fio.ib2.common.wicket.web.layout.image.FioImage/png/VlajkaGbVelka-ver-33A79546E65BF38629EC0BF90A0BCC3D.png"/></a>
+                    </div>
+                    <div>
+                        <span style="white-space: nowrap; margin-right: 10px">
+                            <span>&copy;</span> <span>2026</span> <span>Fio banka</span>
+                        </span>
+
+                        <span style="white-space: nowrap;">
+                            <a target="_blank" href="https://www.fio.cz/spolecnost_dokumenty_ostatni_pravniProhlaseni.php">
+                                Právní prohlášení
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+	</div>
+	<div id="overlayImgZoom"></div>
+
+</body>
+</html>
